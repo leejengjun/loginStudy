@@ -25,6 +25,7 @@ public class LoginService {
             return null;
         }*/
 
+        /** 위 주석 내용을 다음과 같이 줄일 수 있음 */
         return memberRepository.findByLoginId(loginId)
                 .filter(m->m.getPassword().equals(password))
                 .orElse(null);
